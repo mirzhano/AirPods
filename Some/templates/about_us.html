@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+{% block content %}
+<head>
+    <title>Airpods</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body id="top">
+<div class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <img src="/static/img/apple.png" alt="">
+            </div>
+            <ul class="header-nav">
+                <li><a href="/">Главная</a></li>
+<!--                <li><a href="http://127.0.0.1:8000/air2/">Каталог</a></li>-->
+                <li><a href="/characteristic/">Характеристика</a></li>
+                <li><a href="/about_us/">О нас</a></li>
+                <!--                <li><a href="/airmax/">AirPods Max</a></li>-->
+            </ul>
+            <div class="header-contact">
+                <a href="#">
+                    <img src="/static/img/phone.png" alt="">
+                    <span>+996 700 700 700</span>
+                </a>
+                <a href="#">
+                    <img src="/static/img/envelope.png" alt="">
+                    <span>@example@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="main-wrapper">
+            <h1 class="title">О нас</h1>
+            <ul class="main-all-airs" style="display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    align-items: center;">
+                <li>
+                    {% for w in info %}
+
+                    <div class="image-wrapper"><img src="{{w.image.url}}" alt=""></div>
+                    <h4>{{w.title}}</h4>
+                    <h4>{{w.cost}}</h4>
+                    <span>{{w.description}}</span>
+                    <button class="btn">
+                        <a href="show_detail/{{w.id}}/">Подробнее</a>
+                    </button>
+                    {% endfor %}
+
+                    <!--                    <hr>-->
+                    <!--                    <div class="advantages">-->
+                    <!--                        <div>-</div>-->
+                    <!--                        <div>-</div>-->
+                    <!--                        <div>-</div>-->
+                    <!--                        <div>Lightning Charging Case</div>-->
+                    <!--                        <div><strong>5 hrs</strong>-->
+                    <!--                            Up to 5 hours of listening time with a single charge 15-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                </li>
+                <!--                <li>-->
+                <!--                    <div class="image-wrapper"><img src="static/img/airpods 3.png" alt=""></div>-->
+                <!--                    <h4>AirPods</h4>-->
+                <!--                    <span>3rd generation</span>-->
+                <!--                    <a href="./airpods-3.html">learn more</a>-->
+                <!--                    <hr>-->
+                <!--                    <div class="advantages">-->
+                <!--                        <div>Personalized Spatial Audio with dynamic head tracking 12</div>-->
+                <!--                        <div>-</div>-->
+                <!--                        <div>Sweat and-->
+                <!--                            water resistant 13-->
+                <!--                        </div>-->
+                <!--                        <div>Lightning Charging Case or-->
+                <!--                            MagSafe Charging Case 14-->
+                <!--                        </div>-->
+                <!--                        <div><strong>6 hrs</strong>-->
+                <!--                            Up to 6 hours of listening time with a single charge 15-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <div class="image-wrapper"><img src="static/img/airpods pro.png" alt=""></div>-->
+                <!--                    <h4>AirPods Pro</h4>-->
+                <!--                    <span>2nd generation</span>-->
+                <!--                    <a href="/airpods-pro.html">learn more</a>-->
+                <!--                    <hr>-->
+                <!--                    <div class="advantages">-->
+                <!--                        <div>Personalized Spatial Audio with dynamic head tracking 12</div>-->
+                <!--                        <div>Active Noise-->
+                <!--                            Cancellation and-->
+                <!--                            Adaptive Transparency-->
+                <!--                        </div>-->
+                <!--                        <div>Sweat and-->
+                <!--                            water resistant 13-->
+                <!--                        </div>-->
+                <!--                        <div>MagSafe Charging Case with speaker and lanyard Loop</div>-->
+                <!--                        <div><strong>6 hrs</strong>-->
+                <!--                            Up to 6 hours of listening time with a single charge 15-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <div class="image-wrapper"><img src="static/img/air max.png" alt=""></div>-->
+                <!--                    <h4>AirPods Max</h4>-->
+                <!--                    <span></span>-->
+                <!--                    <a href="#">learn more</a>-->
+                <!--                    <hr>-->
+                <!--                    <div class="advantages">-->
+                <!--                        <div>Personalized Spatial Audio with dynamic head tracking 12</div>-->
+                <!--                        <div>Active Noise-->
+                <!--                            Cancellation and-->
+                <!--                            Adaptive Transparency-->
+                <!--                        </div>-->
+                <!--                        <div>Sweat and-->
+                <!--                            water resistant 13-->
+                <!--                        </div>-->
+                <!--                        <div>Smart Case</div>-->
+                <!--                        <div><strong>20 hrs</strong>-->
+                <!--                            Up to 20 hours of listening time with a single charge 15-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </li>-->
+            </ul>
+        </div>
+    </div>
+</main>
+</body>
+{% endblock %}
+</html>

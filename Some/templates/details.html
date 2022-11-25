@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+<body>
+    <center>
+        <header>
+            <h1>
+                Описание наушников
+            </h1>
+        </header>
+
+        <div class="class">
+            <h2> Название - {{airpod.title}}</h2>
+            <p>Описание -{{airpod.description}}</p>
+            <p>Цена - {{airpod.cost}}</p>
+            <p>Характеристика-{{airpod.characteristic}}</p>
+            <img src="{{airpod.image.url}}" alt="" width="300" height="300">
+        </div>
+    </center>
+</body>
