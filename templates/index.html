@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AirPodsShop</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <img src="/static/img/apple.png" alt="">
+            </div>
+            <ul class="header-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/catalog/">Catalog</a></li>
+                <li><a href="/about_us">About us</a></li>
+            </ul>
+            <div class="header-contact">
+                <a href="#">
+                    <img src="/static/img/phone.png" alt="">
+                    <span>+996 700 700 700</span>
+                </a>
+                <a href="#">
+                    <img src="/static/img/envelope.png" alt="">
+                    <span>@example@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<main>
+    {% for i in headers %}
+    <section class="first">
+        <div class="inner">
+            <div>
+                <h1>{{i.title}}</h1>
+                <p>{{i.description}}</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    {% for j in post %}
+    <section class="second">
+        <div class="inner_second">
+            <h2>{{j.title}}</h2>
+            <p>{{j.description}}</p>
+            <a href="#">Learn more ></a>
+
+        </div>
+        <img src="{{j.image.url}}"
+             alt="axaxa" width="40%">
+    </section>
+    {% endfor %}
+    <section class="third">
+        <div class="big_card">
+            {% for y in pic %}
+            <div class="inner_third" style="background-image:url({{y.image.url}})">
+                <a href="#">
+                    <h2>{{y.title}}</h2>
+                    <p>{{y.description}}</p>
+                    <span>
+                            <a href="#" class="link">Learn more ></a>
+                        </span>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+</body>
+</html>

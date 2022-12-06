@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --color-text: #374957;
+    --color-button: #2f3b45;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 3px 15px;
+    margin-top: 20px;
+
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 40px;
+}
+
+.header-contact img {
+    width: 20px;
+}
+
+.title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.header-nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--color-text)
+}
+
+.header-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.header-contact a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.main-all-airs {
+    flex: 1;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 30px
+    align-items: center;
+}
+
+
+.main-sale {
+    display: flex;
+    margin-top: 160px;
+}
+
+.main-sale span {
+    margin-right: 20px;
+    font-size: 25px;
+}
+.main-all-airs{
+    display: flex;
+    gap: 30px
+}
+
+.main-all-airs img {
+    height: 160px;
+}
+
+.main-all-airs li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
+    min-width: 300px;
+    flex: 1;
+}
+
+.main-all-airs li h4 {
+    margin-top: 11px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 25px;
+    max-width: 300px
+}
+
+.main-all-airs span {
+    font-size: 13px;
+    min-height: 18px;
+}
+
+.main-all-airs a {
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+hr {
+    width: 100% !important;
+}
+
+.image-wrapper {
+    min-height: 160px;
+}
+
+
+.advantages {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages div {
+    min-height: 100px;
+
+}
+
+
+
+.main-info img {
+    margin-right: 40px;
+}
+
+.main-wrapper {
+    margin-top: 60px;
+}
+
+.main-wrapper h1 {
+    margin: 20px 0;
+    margin-bottom: 40px;
+}
+
+

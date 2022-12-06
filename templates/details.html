@@ -1,0 +1,44 @@
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+  <link rel="stylesheet" href="{% static 'css/global.css' %}">
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <img src="/static/img/apple.png" alt="">
+            </div>
+            <ul class="header-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/catalog/">Catalog</a></li>
+                <li><a href="/about_us">About us</a></li>
+            </ul>
+            <div class="header-contact">
+                <a href="#">
+                    <img src="/static/img/phone.png" alt="">
+                    <span>+996 700 700 700</span>
+                </a>
+                <a href="#">
+                    <img src="/static/img/envelope.png" alt="">
+                    <span>@example@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <center>
+        <header>
+            <h1>
+                Description of headphones
+            </h1>
+        </header>
+
+        <div class="class">
+            <h2> Name- {{airpod.title}}</h2>
+            <p>Description-{{airpod.description}}</p>
+            <p>Cost- {{airpod.cost}}</p>
+            <p>Characteristic-{{airpod.characteristic}}</p>
+            <img src="{{airpod.image.url}}" alt="" width="300" height="300">
+        </div>
+    </center>
+</body>

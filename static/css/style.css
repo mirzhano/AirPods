@@ -1,0 +1,171 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+main {
+    width: 100%;
+}
+
+.first {
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    background-image: url(https://asiastore.kg/image/catalog/airpods/airpods3/1871d163-e083-49fc-9a99-ad06c14431d0.png);
+}
+
+
+.inner {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+.inner div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.inner div h1 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.inner div p {
+    font-size: 30px;
+    width: 750px;
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+.inner div a {
+    border: 1px solid rgb(53, 126, 152);
+    background-color: rgb(53, 126, 152);
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    color: #282828;
+
+}
+
+.second {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 750px;
+
+    margin: 100px 0;
+}
+
+.inner_second {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.inner_second h2 {
+    font-size: 35px;
+
+}
+
+.inner_second p {
+    width: 700px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.inner_second a {
+    color: rgb(0, 191, 255);
+    font-size: 20px;
+    padding: 5px 10px;
+}
+.third {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.big_card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.inner_third {
+      width: 33%;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.inner_third a {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+}
+
+.inner_third a h2 {
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.inner_third a p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.link {
+    font-size: 20px;
+    color: rgb(0, 191, 255);
+}
+
+footer {
+    height: 350px;
+    background-color: rgb(89, 155, 212);
+    margin: 50px 0 0 0;
+}
+
+footer div {
+    width: 90%;
+    margin: 0 auto;
+    height: 80%;
+    padding: 20px 0;
+}
+
+footer ul li {
+    padding: 10px 0;
+    font-size: 20px;
+    color: aliceblue;
+}
