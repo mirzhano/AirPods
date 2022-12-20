@@ -18,7 +18,10 @@
             <ul class="header-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/catalog/">Catalog</a></li>
-                <li><a href="/about_us">About us</a></li>
+                <li><a href="/order/">Ordering</a></li>
+                <li><a href="/about_us/">About us</a></li>
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
             </ul>
             <div class="header-contact">
                 <a href="#">
@@ -43,10 +46,10 @@
                 <li class="main-all-airs_item">
                     <div class="image-wrapper"><img src="{{w.image.url}}" alt=""></div>
                     <h4>{{w.title}}</h4>
-                    <h4> Cost: {{w.cost}} soms</h4>
+                    <h4> Cost: {{w.cost}} som</h4>
                     <span>{{w.description}}</span>
                     <button class="btn">
-                        <a href="show_detail/{{w.id}}/">Buy now</a>
+                        <a href="show_detail/{{w.id}}/">Postview</a>
                     </button>
                 </li>
                 {% endfor %}

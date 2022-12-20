@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment</title>
+</head>
+<body>
+<ul class="order-main">
+        {% for u in info %}
+        <li class="order-item">
+                <p>{{ u.name }}</p>
+                <p>{{ u.comment }}</p>
+                <button class="btn" type="submit" value="delete">
+                    <a href="{% url 'about:delete' u.id %}">delete</a>
+                </button>
+                <button class="btn" type="submit" value="update">
+                    <a href="{% url 'about:update' u.id %}">edit</a>
+                </button>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

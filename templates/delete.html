@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <img src="/static/img/apple.png" alt="">
+            </div>
+            <ul class="header-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/catalog/">Catalog</a></li>
+                <li><a href="/order/">Ordering</a></li>
+                <li><a href="/about_us/">About us</a></li>
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            </ul>
+            <div class="header-contact">
+                <a href="#">
+                    <img src="/static/img/phone.png" alt="">
+                    <span>+996 700 700 700</span>
+                </a>
+                <a href="#">
+                    <img src="/static/img/envelope.png" alt="">
+                    <span>@example@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="del_wrap">
+    <form action="" method="post" enctype="multipart/form-data">
+        <h1>Вы уверены что хотите удалить ?</h1>
+        {% csrf_token %}
+        <input type="submit" value="delete">
+
+    </form>
+</div>
+<style>
+    .del_wrap {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+    }
+</style>
+</body>
+</html>

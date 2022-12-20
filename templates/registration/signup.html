@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <img src="/static/img/apple.png" alt="">
+            </div>
+            <ul class="header-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/catalog/">Catalog</a></li>
+                <li><a href="/order/">Ordering</a></li>
+                <li><a href="/about_us/">About us</a></li>
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            </ul>
+            <div class="header-contact">
+                <a href="#">
+                    <img src="/static/img/phone.png" alt="">
+                    <span>+996 700 700 700</span>
+                </a>
+                <a href="#">
+                    <img src="/static/img/envelope.png" alt="">
+                    <span>@example@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+  <h2>Sign Up</h2>
+  <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+    <button type="submit" value="Save">Sign Up</button>
+  </form>
+</div>
+
+</body>
+</html>

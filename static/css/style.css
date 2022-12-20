@@ -19,7 +19,7 @@ main {
     background-size: cover;
     background-position: top;
     height: 100vh;
-    background-image: url(https://asiastore.kg/image/catalog/airpods/airpods3/1871d163-e083-49fc-9a99-ad06c14431d0.png);
+    background-image: url(https://images.unsplash.com/photo-1511025998370-7d59f82e9c8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=853&q=80);
 }
 
 
@@ -37,7 +37,6 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-
     gap: 25px;
 }
 
@@ -53,17 +52,7 @@ main {
     font-weight: 500;
 }
 
-.inner div a {
-    border: 1px solid rgb(53, 126, 152);
-    background-color: rgb(53, 126, 152);
-    padding: 10px 20px;
-    font-size: 20px;
-    width: 200px;
-    text-align: center;
-    border-radius: 5px;
-    color: #282828;
 
-}
 
 .second {
     display: flex;
@@ -71,7 +60,6 @@ main {
     flex-direction: column;
     align-items: center;
     height: 750px;
-
     margin: 100px 0;
 }
 
@@ -167,5 +155,35 @@ footer div {
 footer ul li {
     padding: 10px 0;
     font-size: 20px;
-    color: aliceblue;
+}
+
+.header-wrapper{
+    margin: 40px;
+}
+
+/* CSS */
+.button-47 {
+  align-items: center;
+  background: #FFFFFF;
+  border: 0 solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  color: #1A202C;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 56px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 24px;
+  text-decoration: none;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+      width: 250px;
+
 }

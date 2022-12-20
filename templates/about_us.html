@@ -3,9 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AirPodsShop</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>About us</title>
+    <!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
 </head>
 <body>
 <div class="header">
@@ -17,7 +21,10 @@
             <ul class="header-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/catalog/">Catalog</a></li>
-                <li><a href="/about_us">About us</a></li>
+                <li><a href="/order/">Ordering</a></li>
+                <li><a href="/about_us/">About us</a></li>
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
             </ul>
             <div class="header-contact">
                 <a href="#">
@@ -33,44 +40,68 @@
     </div>
 </div>
 <main>
-    {% for i in headers %}
-    <section class="first">
-        <div class="inner">
-            <div>
-                <h1>{{i.title}}</h1>
-                <p>{{i.description}}</p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
-    </section>
-    {% endfor %}
-    {% for j in post %}
-    <section class="second">
-        <div class="inner_second">
-            <h2>{{j.title}}</h2>
-            <p>{{j.description}}</p>
-            <a href="#">Learn more ></a>
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="about-content">
+                <h1 class="about-title">About us</h1>
+                <p class="about-paragraph">AirPodsShop is the first official authorized partner of Apple in Kyrgyzstan
+                    with
+                    the status of Apple Authorized Reseller. In our store you can not only buy an iPhone, Mac computer
+                    or
+                    iPad tablet, but also other Apple equipment and accessories for it. AirPodsShop is a place where you
+                    will be helped with the choice of equipment, taught how to use it, give advice on the operation of
+                    your
+                    gadgets and offer high-quality accessories.Our store is the only authorized reseller of Apple and
+                    Garmin
+                    in Kyrgyzstan, as well as the official distributor of JBL & Harman Kardon and smart devices from
+                    Yandex.
+                    The store was opened on December 26, 2022 and takes pride of place among the official distributors
+                    of
+                    Apple products throughout the country. Business partners: Okenova Mirzhan Askarbekov Aktan Asakeeva
+                    Bermet</p>
 
-        </div>
-        <img src="{{j.image.url}}"
-             alt="axaxa" width="40%">
-    </section>
-    {% endfor %}
-    <section class="third">
-        <div class="big_card">
-            {% for y in pic %}
-            <div class="inner_third" style="background-image:url({{y.image.url}})">
-                <a href="#">
-                    <h2>{{y.title}}</h2>
-                    <p>{{y.description}}</p>
-                    <span>
-                            <a href="#" class="link">Learn more ></a>
-                        </span>
-                </a>
+                <div class="about-contact">
+                    <h2 class="about-contact-title">Contacts:</h2>
+                    <div class="about-contact-wrapper">
+                        <p class="about-contact-address">пр. Манаса, 40 (пер. ул. Киевская) <br>
+                            Пн - Вс 10:00 - 20:00</p>
+                        <p>+996 (555) 802 000 <br>
+                            +996 (505) 802 000</p>
+                    </div>
+                    <h2 class="about-title">Read a reviews</h2>
+                    <a class="button-71" href="{% url 'order:add' %}">Leave a review</a>
+                    {% block content %}
+                    <div class="'features">
+                        <div class="add_wrap">
+                           <form action="" method="post" enctype="multipart/form-data">
+                               {% csrf_token %}
+                                {{form.as_p}}
+                               <ul>
+                                    {% for i in info %}
+                                        <li>
+                                            <p>{{ i.name }}</p>
+                                            <p>{{ i.comment }}</p>
+                                             <button class="btn"type="submit" value="delete" >
+                                                 <a href="{% url 'order:delete' i.id %}" >delete</a>
+                                             </button>
+                                            <button class="btn"type="submit" value="update" >
+                                                <a href="{% url 'order:update' i.id %}">edit</a>
+                                            </button>
+                                        </li>
+
+
+                                            {% endfor %}
+                               </ul>
+                           </form>
+                        </div>
+                    </div>
+                    {% endblock content %}
+                </div>
             </div>
-            {% endfor %}
         </div>
-    </section>
+    </div>
 </main>
 </body>
 </html>
+
+

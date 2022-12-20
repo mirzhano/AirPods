@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+ <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card">
+        <h2 class="card-title text-center">Register</h2>
+        <div class="card-body py-md-4">
+            <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                 <div> <button type="submit">Log In</button> </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+</body>
+</html>

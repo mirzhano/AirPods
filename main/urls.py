@@ -21,8 +21,12 @@ from django.conf.urls.static import static
 import pods
 
 urlpatterns = [
-                  path('admin/', admin.site.urls),
-                  path('', include('pods.urls')),
-                  path('catalog/', include('catalog.urls'))
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
-              + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+      path('admin/', admin.site.urls),
+      path("accounts/", include("django.contrib.auth.urls")),  # new
+      path("accounts/",include("accounts.urls")),
+      path('', include('pods.urls')),
+      path('catalog/', include('catalog.urls')),
+      path('order/', include('order.urls')),
+      path('about_us/', include('about.urls')),
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

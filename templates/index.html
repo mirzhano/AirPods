@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>AirPodsShop</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 <div class="header">
@@ -17,7 +17,10 @@
             <ul class="header-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/catalog/">Catalog</a></li>
-                <li><a href="/about_us">About us</a></li>
+                <li><a href="/order/">Ordering</a></li>
+                <li><a href="/about_us/">About us</a></li>
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
             </ul>
             <div class="header-contact">
                 <a href="#">
@@ -39,7 +42,7 @@
             <div>
                 <h1>{{i.title}}</h1>
                 <p>{{i.description}}</p>
-                <a href="#">Learn more</a>
+                <a class="button-47" href="/catalog/">Postview catalog</a>
             </div>
         </div>
     </section>
@@ -49,7 +52,7 @@
         <div class="inner_second">
             <h2>{{j.title}}</h2>
             <p>{{j.description}}</p>
-            <a href="#">Learn more ></a>
+            <a href="/catalog/">Learn more ></a>
 
         </div>
         <img src="{{j.image.url}}"
@@ -58,17 +61,19 @@
     {% endfor %}
     <section class="third">
         <div class="big_card">
-            {% for y in pic %}
-            <div class="inner_third" style="background-image:url({{y.image.url}})">
-                <a href="#">
-                    <h2>{{y.title}}</h2>
-                    <p>{{y.description}}</p>
-                    <span>
-                            <a href="#" class="link">Learn more ></a>
-                        </span>
-                </a>
-            </div>
-            {% endfor %}
+            <ul class="main-all-airs" >
+                 {% for airpod in pic %}
+                        <div class="inner_third" style="background-image:url({{airpod.image.url}})">
+                            <a href="#">
+                               <h2>{{airpod.title}}</h2>
+                                <p>{{airpod.description}}</p>
+                               <span>
+                                   <a href="/catalog/show_detail/{{airpod.id}}/">Postview</a>
+                               </span>
+                           </a>
+                       </div>
+                {% endfor %}
+            </ul>
         </div>
     </section>
 </main>
